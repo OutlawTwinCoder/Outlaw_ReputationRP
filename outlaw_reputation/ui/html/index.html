@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Outlaw Reputation</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div id="app" class="hidden">
+    <header>
+      <h1>Outlaw Reputation Hub</h1>
+      <button id="closeBtn">Fermer</button>
+    </header>
+
+    <section class="grid">
+      <article>
+        <h2>Réputation joueur</h2>
+        <ul id="playerRep"></ul>
+      </article>
+
+      <article>
+        <h2>Entreprise</h2>
+        <div id="companyPanel"></div>
+      </article>
+
+      <article>
+        <h2>Top joueurs</h2>
+        <ol id="leaderboard"></ol>
+      </article>
+
+      <article>
+        <h2>Dossier police</h2>
+        <div id="policeRecord"></div>
+      </article>
+    </section>
+  </div>
+
+  <div id="requestPopup" class="popup hidden">
+    <p id="requestMessage"></p>
+    <div class="actions">
+      <button id="acceptBtn">Accepter</button>
+      <button id="declineBtn">Refuser</button>
+    </div>
+  </div>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
