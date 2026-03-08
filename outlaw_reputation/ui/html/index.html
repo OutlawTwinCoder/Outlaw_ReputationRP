@@ -4,43 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Outlaw Reputation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
-  <div id="app" class="hidden">
-    <header>
-      <h1>Outlaw Reputation Hub</h1>
-      <button id="closeBtn">Fermer</button>
+  <div id="app" class="panel hidden">
+    <header class="panel-header">
+      <div class="title-wrap">
+        <span class="title-icon">⚑</span>
+        <div>
+          <h1>Outlaw Reputation</h1>
+          <p id="playerRank" class="subtitle">Rank: Street Prospect</p>
+        </div>
+      </div>
+      <button id="closeBtn" class="close-btn" aria-label="Fermer">✕</button>
     </header>
 
-    <section class="grid">
-      <article>
-        <h2>Réputation joueur</h2>
-        <ul id="playerRep"></ul>
-      </article>
+    <nav class="tabs" id="tabsNav" aria-label="Navigation principale">
+      <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="reputation">Reputation</button>
+      <button class="tab-btn" data-tab="contracts">Contracts</button>
+      <button class="tab-btn" data-tab="progression">Progression</button>
+      <button class="tab-btn" data-tab="statistics">Statistics</button>
+    </nav>
 
-      <article>
-        <h2>Entreprise</h2>
-        <div id="companyPanel"></div>
-      </article>
-
-      <article>
-        <h2>Top joueurs</h2>
-        <ol id="leaderboard"></ol>
-      </article>
-
-      <article>
-        <h2>Dossier police</h2>
-        <div id="policeRecord"></div>
-      </article>
-    </section>
+    <section id="overview" class="tab-panel active"></section>
+    <section id="reputation" class="tab-panel"></section>
+    <section id="contracts" class="tab-panel"></section>
+    <section id="progression" class="tab-panel"></section>
+    <section id="statistics" class="tab-panel"></section>
   </div>
 
   <div id="requestPopup" class="popup hidden">
     <p id="requestMessage"></p>
     <div class="actions">
       <button id="acceptBtn">Accepter</button>
-      <button id="declineBtn">Refuser</button>
+      <button id="declineBtn" class="secondary">Refuser</button>
     </div>
   </div>
 
